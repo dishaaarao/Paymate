@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import './Login.css'; // Reusing Login styles for consistent Auth design
-import bannerImage from '../assets/paytm-hero.png';
+import './Login.css';
+import promoImage from '../assets/paytm-hero.png';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -36,77 +36,83 @@ const Register = () => {
     };
 
     return (
-        <div className="login-page-wrapper">
-            <div className="login-container">
-                {/* Left Side: Form */}
-                <div className="login-form-section">
-                    <div className="paymate-logo-wrapper" onClick={() => navigate('/')}>
-                        <div className="paymate-logo-icon">
-                            <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px', marginTop: '5px' }}>₹</span>
+        <div className="auth-page-root">
+            <div className="auth-main-card">
+                {/* Left Side: Form Section */}
+                <div className="auth-form-side">
+                    <div className="auth-brand-logo" onClick={() => navigate('/')}>
+                        <div className="auth-logo-triangle">
+                            <span>₹</span>
                         </div>
-                        <div className="paymate-logo-text">PayMate</div>
+                        <div className="auth-logo-text-group">
+                            <span className="auth-logo-main">PayMate</span>
+                            <span className="auth-logo-sub">Money</span>
+                        </div>
                     </div>
 
-                    <h2 className="login-title">Create a New Account</h2>
+                    <h2 className="auth-page-title">Create a New Account</h2>
 
                     {error && (
                         <div style={{
-                            background: 'rgba(255, 107, 107, 0.2)',
-                            border: '1px solid #ff6b6b',
-                            color: '#ff6b6b',
-                            padding: '0.75rem',
-                            borderRadius: '10px',
+                            background: '#fef2f2',
+                            border: '1px solid #fecaca',
+                            color: '#dc2626',
+                            padding: '12px',
+                            borderRadius: '8px',
                             marginBottom: '1rem',
-                            fontSize: '0.9rem'
+                            fontSize: '0.9rem',
+                            fontWeight: '600'
                         }}>
                             {error}
                         </div>
                     )}
 
                     <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label className="form-label">Username</label>
+                        <div className="auth-input-wrapper">
+                            <label style={{ fontSize: '0.9rem', fontWeight: '600', color: '#64748b', display: 'block', marginBottom: '0.5rem' }}>Username</label>
                             <input
                                 type="text"
                                 name="username"
-                                className="form-input"
+                                className="auth-field-input"
                                 value={formData.username}
                                 onChange={handleChange}
                                 required
                                 placeholder="Choose a username"
                             />
                         </div>
-                        <div className="form-group">
-                            <label className="form-label">Email Address</label>
+
+                        <div className="auth-input-wrapper">
+                            <label style={{ fontSize: '0.9rem', fontWeight: '600', color: '#64748b', display: 'block', marginBottom: '0.5rem' }}>Email Address</label>
                             <input
                                 type="email"
                                 name="email"
-                                className="form-input"
+                                className="auth-field-input"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
                                 placeholder="Enter your email"
                             />
                         </div>
+
                         <div style={{ display: 'flex', gap: '1rem' }}>
-                            <div className="form-group" style={{ flex: 1 }}>
-                                <label className="form-label">Password</label>
+                            <div className="auth-input-wrapper" style={{ flex: 1 }}>
+                                <label style={{ fontSize: '0.9rem', fontWeight: '600', color: '#64748b', display: 'block', marginBottom: '0.5rem' }}>Password</label>
                                 <input
                                     type="password"
                                     name="password"
-                                    className="form-input"
+                                    className="auth-field-input"
                                     value={formData.password}
                                     onChange={handleChange}
                                     required
                                     placeholder="Create password"
                                 />
                             </div>
-                            <div className="form-group" style={{ flex: 1 }}>
-                                <label className="form-label">Confirm Password</label>
+                            <div className="auth-input-wrapper" style={{ flex: 1 }}>
+                                <label style={{ fontSize: '0.9rem', fontWeight: '600', color: '#64748b', display: 'block', marginBottom: '0.5rem' }}>Confirm</label>
                                 <input
                                     type="password"
                                     name="confirmPassword"
-                                    className="form-input"
+                                    className="auth-field-input"
                                     value={formData.confirmPassword}
                                     onChange={handleChange}
                                     required
@@ -115,38 +121,44 @@ const Register = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="btn-proceed">
-                            Sign Up
+                        <button type="submit" className="btn-auth-submit">
+                            Proceed Securely
                         </button>
                     </form>
 
-                    <div className="divider-container">
-                        <div className="divider-line"></div>
-                        <span className="divider-text">Or</span>
-                        <div className="divider-line"></div>
+                    <div className="auth-divider-wrap">
+                        <div className="auth-divider-line"></div>
+                        <span className="auth-divider-text">Or</span>
+                        <div className="auth-divider-line"></div>
                     </div>
 
-                    <button className="qr-login-btn" onClick={() => navigate('/login')}>
+                    <button className="btn-auth-secondary" onClick={() => navigate('/login')}>
                         Login to Existing Account
                     </button>
 
-                    <div className="login-footer">
+                    <div className="auth-page-footer">
                         By proceeding, you agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a> of PayMate.
                     </div>
                 </div>
 
-                {/* Right Side: Marketing Banner */}
-                <div className="login-banner-section">
-                    <div className="banner-content">
-                        <h3 className="banner-headline">Join PayMate Today.</h3>
-                        <h2 className="banner-subheadline">Start Your Investment<br />Journey for Free</h2>
+                {/* Right Side: Promo Section */}
+                <div className="auth-promo-side">
+                    <p className="promo-title-small">Join PayMate Money Today.</p>
+                    <h1 className="promo-headline-large">Start Your Investment<br />Journey for Free</h1>
 
-                        <div className="banner-highlight-btn">
-                            Open Free Demat Account →
-                        </div>
+                    <div className="promo-stats-bar">
+                        Join 21 Million+ Investors
                     </div>
 
-                    <img src={bannerImage} alt="App Interface" className="banner-image" />
+                    <div className="btn-promo-action">
+                        Open Free Demat account <span>→</span>
+                    </div>
+
+                    <img src={promoImage} alt="Dashboard Preview" className="promo-phone-mockup" />
+
+                    <div style={{ marginTop: 'auto', fontSize: '0.75rem', color: '#94a3b8', textAlign: 'left', lineHeight: '1.4' }}>
+                        Investments in securities markets are subject to market risks, read all the related documents carefully before investing.
+                    </div>
                 </div>
             </div>
         </div>

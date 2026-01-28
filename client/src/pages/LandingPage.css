@@ -44,8 +44,7 @@ html {
     padding-bottom: 0;
     /* Remove space so phones touch the edge */
     position: relative;
-    overflow: visible;
-    /* Allow phones to overlap white section if needed */
+    overflow: hidden;
 }
 
 .hero-glow-top {
@@ -192,8 +191,8 @@ html {
 }
 
 .hero-text-area {
-    padding-bottom: 80px;
-    /* Give text some breathing room from the bottom */
+    padding-bottom: 120px;
+    /* Center text vertically relative to bottom-aligned phones */
     max-width: 650px;
 }
 
@@ -267,16 +266,15 @@ html {
 .hero-mockup-wrapper {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .mockup-img-main {
-    width: 540px;
-    /* Slightly larger like the original */
+    width: 530px;
     height: auto;
-    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
     display: block;
-    margin-bottom: -40px;
-    /* Overlap the white section for that seamless look */
+    margin-bottom: 0;
     position: relative;
     z-index: 10;
 }

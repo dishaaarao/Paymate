@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './Login.css';
-// Reusing the hero image as it likely fits the 'app interface' look
-import bannerImage from '../assets/paytm-hero.png';
+import promoImage from '../assets/paytm-hero.png';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -24,50 +23,60 @@ const Login = () => {
     };
 
     return (
-        <div className="login-page-wrapper">
-            <div className="login-container">
-                {/* Left Side: Login Form */}
-                <div className="login-form-section">
-                    <div className="paymate-logo-wrapper" onClick={() => navigate('/')}>
-                        <div className="paymate-logo-icon">
-                            <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px', marginTop: '5px' }}>₹</span>
+        <div className="auth-page-root">
+            <div className="auth-main-card">
+                {/* Left Side: Form Section */}
+                <div className="auth-form-side">
+                    <div className="auth-brand-logo" onClick={() => navigate('/')}>
+                        <div className="auth-logo-triangle">
+                            <span>₹</span>
                         </div>
-                        <div className="paymate-logo-text">PayMate</div>
+                        <div className="auth-logo-text-group">
+                            <span className="auth-logo-main">PayMate</span>
+                            <span className="auth-logo-sub">Money</span>
+                        </div>
                     </div>
 
-                    <h2 className="login-title">Login or Create an Account</h2>
+                    <h2 className="auth-page-title">Login or Create an Account</h2>
 
                     {error && (
                         <div style={{
-                            background: 'rgba(255, 107, 107, 0.2)',
-                            border: '1px solid #ff6b6b',
-                            color: '#ff6b6b',
-                            padding: '0.75rem',
-                            borderRadius: '10px',
+                            background: '#fef2f2',
+                            border: '1px solid #fecaca',
+                            color: '#dc2626',
+                            padding: '12px',
+                            borderRadius: '8px',
                             marginBottom: '1rem',
-                            fontSize: '0.9rem'
+                            fontSize: '0.9rem',
+                            fontWeight: '600'
                         }}>
                             {error}
                         </div>
                     )}
 
                     <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label className="form-label">Email Address</label>
+                        <div className="auth-input-wrapper">
+                            <div className="auth-label-link">
+                                <label style={{ fontSize: '0.9rem', fontWeight: '600', color: '#64748b' }}>Email Address</label>
+                            </div>
                             <input
                                 type="email"
-                                className="form-input"
+                                className="auth-field-input"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                                 placeholder="Enter your email"
                             />
                         </div>
-                        <div className="form-group">
-                            <label className="form-label">Password</label>
+
+                        <div className="auth-input-wrapper">
+                            <div className="auth-label-link">
+                                <label style={{ fontSize: '0.9rem', fontWeight: '600', color: '#64748b' }}>Password</label>
+                                <Link to="#">Login with OTP</Link>
+                            </div>
                             <input
                                 type="password"
-                                className="form-input"
+                                className="auth-field-input"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
@@ -75,38 +84,44 @@ const Login = () => {
                             />
                         </div>
 
-                        <button type="submit" className="btn-proceed">
+                        <button type="submit" className="btn-auth-submit">
                             Proceed Securely
                         </button>
                     </form>
 
-                    <div className="divider-container">
-                        <div className="divider-line"></div>
-                        <span className="divider-text">Or</span>
-                        <div className="divider-line"></div>
+                    <div className="auth-divider-wrap">
+                        <div className="auth-divider-line"></div>
+                        <span className="auth-divider-text">Or</span>
+                        <div className="auth-divider-line"></div>
                     </div>
 
-                    <button className="qr-login-btn" onClick={() => navigate('/register')}>
-                        Create a New Account
+                    <button className="btn-auth-secondary" onClick={() => navigate('/register')}>
+                        Login with QR code
                     </button>
 
-                    <div className="login-footer">
+                    <div className="auth-page-footer">
                         By proceeding, you agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a> of PayMate.
                     </div>
                 </div>
 
-                {/* Right Side: Marketing Banner */}
-                <div className="login-banner-section">
-                    <div className="banner-content">
-                        <h3 className="banner-headline">Switch to PayMate. Pay Less, Trade More.</h3>
-                        <h2 className="banner-subheadline">Margin Trading Facility (MTF)<br />From 7.99% p.a.</h2>
+                {/* Right Side: Promo Section */}
+                <div className="auth-promo-side">
+                    <p className="promo-title-small">Switch to PayMate Money. Pay Less, Trade More.</p>
+                    <h1 className="promo-headline-large">Margin Trading Facility (MTF)<br />From 7.99% p.a.</h1>
 
-                        <div className="banner-highlight-btn">
-                            Invest With MTF →
-                        </div>
+                    <div className="promo-stats-bar">
+                        4X Buying Power | 1200+ Stocks
                     </div>
-                    {/* Using the hero image as a placeholder for the phone mockup */}
-                    <img src={bannerImage} alt="App Interface" className="banner-image" />
+
+                    <div className="btn-promo-action">
+                        Invest With MTF <span>→</span>
+                    </div>
+
+                    <img src={promoImage} alt="Dashboard Preview" className="promo-phone-mockup" />
+
+                    <div style={{ marginTop: 'auto', fontSize: '0.75rem', color: '#94a3b8', textAlign: 'left', lineHeight: '1.4' }}>
+                        Investments in securities markets are subject to market risks, read all the related documents carefully before investing.
+                    </div>
                 </div>
             </div>
         </div>

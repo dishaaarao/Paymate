@@ -1,274 +1,258 @@
-/* Login Page - Matching Landing Page Theme */
-.login-page-wrapper {
+/* --- PIXEL-PERFECT AUTH UI (PAYTM MONEY STYLE) --- */
+
+:root {
+    --auth-bg-light: #f4f7fb;
+    --auth-white: #ffffff;
+    --auth-cyan: #00baf2;
+    --auth-cyan-hover: #009ecd;
+    --auth-navy: #012a72;
+    --auth-grey: #64748b;
+    --auth-border: #e2e8f0;
+    --auth-text-dark: #1e293b;
+}
+
+.auth-page-root {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Matching Landing Page Gradient */
-    background: radial-gradient(80% 80% at 50% 110%, #1e3a8a 0%, #020617 60%);
+    background-color: var(--auth-bg-light);
+    font-family: 'Inter', -apple-system, sans-serif;
     padding: 2rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.login-container {
+.auth-main-card {
     display: flex;
     width: 100%;
-    max-width: 900px;
-    background: linear-gradient(135deg, rgba(10, 30, 59, 0.8) 0%, rgba(0, 12, 36, 0.8) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    background-color: var(--auth-white);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    min-height: 550px;
-    backdrop-filter: blur(20px);
+    min-height: 600px;
 }
 
-/* Left Side - Form */
-.login-form-section {
+/* Left Side: Form Area */
+.auth-form-side {
     flex: 1;
-    padding: 3rem 3rem;
+    padding: 3.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    color: #ffffff;
 }
 
-.paymate-logo-wrapper {
+.auth-brand-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 3rem;
+    gap: 12px;
+    margin-bottom: 3.5rem;
     cursor: pointer;
 }
 
-.paymate-logo-icon {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, #00D09C 0%, #00bf8f 100%);
+.auth-logo-triangle {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #00baf2 0%, #00d09c 100%);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 208, 156, 0.3);
 }
 
-.paymate-logo-text {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #ffffff;
+.auth-logo-triangle span {
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.auth-logo-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.auth-logo-main {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1e293b;
     letter-spacing: -0.5px;
 }
 
-.login-title {
-    font-size: 1.5rem;
+.auth-logo-sub {
+    font-size: 0.85rem;
+    color: var(--auth-cyan);
     font-weight: 600;
-    margin-bottom: 2rem;
-    color: #ffffff;
 }
 
-.form-group {
+.auth-page-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 2rem;
+}
+
+.auth-input-wrapper {
     margin-bottom: 1.5rem;
 }
 
-.form-label {
-    display: block;
+.auth-label-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 0.5rem;
-    color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 600;
 }
 
-.form-input {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    font-size: 1rem;
-    color: #ffffff;
-    transition: all 0.2s;
-    background: rgba(255, 255, 255, 0.05);
-    font-family: inherit;
-}
-
-.form-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.form-input:focus {
-    outline: none;
-    border-color: #00D09C;
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 3px rgba(0, 208, 156, 0.1);
-}
-
-.btn-proceed {
-    width: 100%;
-    background: #00D09C;
-    color: #000c24;
-    border: none;
-    padding: 1.1rem;
-    border-radius: 10px;
-    font-size: 1.05rem;
+.auth-label-link a {
+    font-size: 0.85rem;
+    color: var(--auth-cyan);
     font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-field-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--auth-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--auth-text-dark);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.auth-field-input::placeholder {
+    color: #94a3b8;
+}
+
+.auth-field-input:focus {
+    border-color: var(--auth-cyan);
+}
+
+.btn-auth-submit {
+    width: 100%;
+    background-color: var(--auth-cyan);
+    color: white;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
     cursor: pointer;
     margin-top: 1rem;
-    transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(0, 208, 156, 0.3);
+    transition: background-color 0.2s;
 }
 
-.btn-proceed:hover {
-    background: #00bf8f;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(0, 208, 156, 0.4);
+.btn-auth-submit:hover {
+    background-color: var(--auth-cyan-hover);
 }
 
-.divider-container {
+.auth-divider-wrap {
     display: flex;
     align-items: center;
-    margin: 2rem 0;
-    color: #94a3b8;
-    font-size: 0.9rem;
+    margin: 2.5rem 0;
 }
 
-.divider-line {
+.auth-divider-line {
     flex: 1;
     height: 1px;
-    background: rgba(255, 255, 255, 0.2);
+    background-color: var(--auth-border);
 }
 
-.divider-text {
+.auth-divider-text {
     padding: 0 1rem;
     color: #94a3b8;
-}
-
-.qr-login-btn {
-    width: 100%;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    padding: 0.9rem;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.qr-login-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #00D09C;
-}
-
-.login-footer {
-    margin-top: 2rem;
     font-size: 0.85rem;
-    color: #94a3b8;
+    font-weight: 600;
+}
+
+.btn-auth-secondary {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--auth-cyan);
+    color: var(--auth-cyan);
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.auth-page-footer {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: #64748b;
     line-height: 1.6;
 }
 
-.login-footer a {
-    color: #00D09C;
+.auth-page-footer a {
+    color: var(--auth-cyan);
     text-decoration: none;
-    transition: color 0.2s;
+    font-weight: 600;
 }
 
-.login-footer a:hover {
-    color: #00bf8f;
-}
-
-/* Right Side - Marketing */
-.login-banner-section {
-    flex: 1.2;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(0, 12, 36, 0.6) 100%);
-    position: relative;
-    overflow: hidden;
-    padding: 3rem;
+/* Right Side: Marketing Side */
+.auth-promo-side {
+    flex: 1;
+    background-color: #f8fafc;
+    padding: 3.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid var(--auth-border);
 }
 
-.banner-content {
-    z-index: 2;
-    max-width: 400px;
-    margin-bottom: 2rem;
-}
-
-.banner-headline {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #ffffff;
+.promo-title-small {
+    font-size: 1rem;
+    color: var(--auth-navy);
+    font-weight: 700;
     margin-bottom: 1rem;
-    line-height: 1.3;
 }
 
-.banner-subheadline {
+.promo-headline-large {
     font-size: 2rem;
     font-weight: 800;
-    color: #00D09C;
-    margin-bottom: 2rem;
+    color: var(--auth-cyan);
     line-height: 1.2;
+    margin-bottom: 2rem;
 }
 
-.banner-highlight-btn {
-    background: #00D09C;
-    color: #000c24;
-    padding: 0.9rem 2.5rem;
-    border-radius: 10px;
+.promo-stats-bar {
+    font-size: 1rem;
     font-weight: 700;
+    color: var(--auth-navy);
+    margin-bottom: 2.5rem;
+}
+
+.btn-promo-action {
+    background-color: var(--auth-navy);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.95rem;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
+    gap: 8px;
     cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(0, 208, 156, 0.3);
+    margin-bottom: 3.5rem;
 }
 
-.banner-highlight-btn:hover {
-    background: #00bf8f;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(0, 208, 156, 0.4);
-}
-
-.banner-image {
+.promo-phone-mockup {
     width: 100%;
-    max-width: 380px;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 320px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05));
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-    .login-container {
+    .auth-main-card {
         flex-direction: column;
         max-width: 500px;
     }
 
-    .login-form-section {
-        padding: 2.5rem 2rem;
-    }
-
-    .login-banner-section {
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 2rem;
-    }
-
-    .banner-headline {
-        font-size: 1.2rem;
-    }
-
-    .banner-subheadline {
-        font-size: 1.5rem;
-    }
-
-    .banner-image {
-        max-width: 280px;
+    .auth-promo-side {
+        display: none;
     }
 }

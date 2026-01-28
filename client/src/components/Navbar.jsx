@@ -47,7 +47,7 @@ const Navbar = () => {
 
                     {/* Shared Links */}
                     <div style={{ display: 'flex', gap: '32px', marginLeft: '20px' }}>
-                        <span style={{ color: '#d1d5db', fontSize: '15px', fontWeight: '500', cursor: 'pointer' }}>Products</span>
+                        <span style={{ color: '#d1d5db', fontSize: '15px', fontWeight: '500', cursor: 'pointer' }} onClick={() => navigate('/products')}>Products</span>
                         <span style={{ color: '#d1d5db', fontSize: '15px', fontWeight: '500', cursor: 'pointer' }}>Pricing</span>
                         <span style={{ color: '#d1d5db', fontSize: '15px', fontWeight: '500', cursor: 'pointer' }}>Company</span>
                         <span style={{ color: '#d1d5db', fontSize: '15px', fontWeight: '500', cursor: 'pointer' }} onClick={() => navigate('/about')}>About Us</span>

@@ -14,11 +14,12 @@ import Wallet from './pages/Wallet';
 import Banks from './pages/Banks';
 import Help from './pages/Help';
 import Cards from './pages/Cards';
+import Products from './pages/Products';
 
 function AppContent() {
   const location = useLocation();
   const portalRoutes = ['/dashboard', '/transactions', '/send', '/profile', '/wallet', '/banks', '/help', '/cards'];
-  const showNavbar = !['/', '/about', ...portalRoutes].includes(location.pathname);
+  const showNavbar = !['/', '/about', '/products', ...portalRoutes].includes(location.pathname);
 
   return (
     <>
@@ -28,6 +29,7 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/products" element={<Products />} />
 
         <Route path="" element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />

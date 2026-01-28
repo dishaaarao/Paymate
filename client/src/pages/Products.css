@@ -1,0 +1,169 @@
+/* --- PIXEL-PERFECT PRODUCTS/PRICING PAGE (PAYTM MONEY STYLE) --- */
+
+.products-page-root {
+    background-color: #ffffff;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #111;
+}
+
+/* --- HERO SECTION --- */
+.products-hero {
+    background-color: #012a72;
+    /* Official Paytm Navy */
+    background-image: radial-gradient(circle at 50% 50%, #00baf2 0%, #012a72 70%);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.products-hero-headline {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+}
+
+/* Pricing Grid */
+.pricing-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.pricing-card-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-badge-white {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 16px;
+    padding: 32px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.badge-amount {
+    color: #012a72;
+    font-size: 56px;
+    font-weight: 950;
+    display: flex;
+    align-items: flex-start;
+}
+
+.badge-currency {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-right: 2px;
+}
+
+.pricing-card-subtext {
+    margin-top: 16px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- CHARGES SECTION --- */
+.trade-charges-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.charges-headline {
+    font-size: 40px;
+    font-weight: 950;
+    color: #0c0c0c;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Tabs */
+.charges-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.tab-pill {
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    background: #f1f5f9;
+    color: #64748b;
+    border: none;
+    transition: all 0.2s;
+}
+
+.tab-pill.active {
+    background: #e0f2fe;
+    color: #00baf2;
+    box-shadow: 0 4px 12px rgba(0, 186, 242, 0.15);
+}
+
+/* Table styling */
+.pricing-table-container {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.pricing-table th {
+    background-color: #ebf2fb;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.pricing-table td {
+    padding: 20px 24px;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tr:hover {
+    background-color: #fafafa;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .pricing-cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .products-hero-headline {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

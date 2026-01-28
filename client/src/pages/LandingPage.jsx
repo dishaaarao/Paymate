@@ -15,165 +15,200 @@ const LandingPage = () => {
 
     return (
         <div className="landing-page-root">
-            {/* --- HERO SECTION --- */}
+            {/* 1. Hero & Navbar Section */}
             <header className="hero-landing">
-                <div className="hero-glow-main"></div>
+                <div className="hero-glow-top"></div>
 
                 <nav className="main-navbar">
-                    <div className="nav-container">
-                        <div className="nav-left">
-                            <div className="brand-logo" onClick={() => navigate('/')}>
-                                <div className="logo-triangle">
-                                    <span>₹</span>
+                    <div className="container-fixed">
+                        <div className="nav-flex">
+                            <div className="nav-left">
+                                <div className="brand-logo" onClick={() => navigate('/')}>
+                                    <div className="logo-triangle">
+                                        <span>₹</span>
+                                    </div>
+                                    <div className="logo-text-group">
+                                        <span className="logo-main">PayMate</span>
+                                        <span className="logo-sub">Money</span>
+                                    </div>
                                 </div>
-                                <div className="logo-text-group">
-                                    <span className="logo-main">PayMate</span>
-                                    <span className="logo-sub">Money</span>
+
+                                <div className="search-bar-wrap">
+                                    <span className="search-icon">🔍</span>
+                                    <input type="text" placeholder="Search Stocks" />
                                 </div>
                             </div>
 
-                            <div className="search-bar-wrap">
-                                <span className="search-icon">🔍</span>
-                                <input type="text" placeholder="Search Stocks" />
+                            <div className="nav-middle">
+                                <span className="nav-item">Products</span>
+                                <span className="nav-item">Pricing</span>
+                                <span className="nav-item">Company</span>
+                                <span className="nav-item">Contact Us</span>
                             </div>
-                        </div>
 
-                        <div className="nav-middle">
-                            <span className="nav-item">Products</span>
-                            <span className="nav-item">Pricing</span>
-                            <span className="nav-item">Company</span>
-                            <span className="nav-item">Contact Us</span>
-                        </div>
-
-                        <div className="nav-right">
-                            <button className="btn-login-outline" onClick={() => navigate('/login')}>Login</button>
-                            <button className="btn-signup-solid" onClick={() => navigate('/register')}>Sign up</button>
+                            <div className="nav-right">
+                                <button className="btn-login-outline" onClick={() => navigate('/login')}>Login</button>
+                                <button className="btn-signup-solid" onClick={() => navigate('/register')}>Sign up</button>
+                            </div>
                         </div>
                     </div>
                 </nav>
 
-                <div className="hero-main-container">
-                    <div className="hero-text-content">
-                        <p className="hero-pill-small">All-in-One Wealth Management</p>
-                        <h1 className="hero-title-giant">
-                            Your Partner in<br />
-                            Smart Investing
-                        </h1>
-                        <p className="hero-subtitle-muted">
-                            Explore Stocks, F&O, Mutual Funds,and IPOs with Ease.<br />
-                            Your Financial Growth Starts Here!
-                        </p>
+                <div className="container-fixed">
+                    <div className="hero-content-grid">
+                        <div className="hero-text-area">
+                            <p className="hero-pill-label">All-in-One Wealth Management</p>
+                            <h1 className="hero-headline">
+                                Your Partner in<br />
+                                Smart Investing
+                            </h1>
+                            <p className="hero-description">
+                                Explore Stocks, F&O, Mutual Funds,and IPOs with Ease.<br />
+                                Your Financial Growth Starts Here!
+                            </p>
 
-                        <button className="btn-neon-large" onClick={() => navigate('/register')}>
-                            Open Demat account
-                        </button>
+                            <button className="btn-primary-neon" onClick={() => navigate('/register')}>
+                                Open Demat account
+                            </button>
 
-                        <div className="hero-stats-line">
-                            <span className="stat-text">21 million+ investors</span>
-                            <div className="vertical-divider"></div>
-                            <span className="stat-text rating">
-                                4.4 <span className="star-gold">★</span> App store rating
-                            </span>
+                            <div className="hero-footer-stats">
+                                <span>21 million+ investors</span>
+                                <span className="stat-divider">|</span>
+                                <span className="rating-wrap">
+                                    4.4 <span className="star-gold">★</span> App store rating
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="hero-mockup-visual">
-                        <img src={heroImage} alt="App Interface Mockup" className="mockup-img-main" />
+                        <div className="hero-mockup-wrapper">
+                            <img src={heroImage} alt="App Interface" className="mockup-img-main" />
+                        </div>
                     </div>
                 </div>
             </header>
 
-            {/* --- INVESTMENT OPTIONS SECTION --- */}
-            <section className="investment-section">
-                <div className="section-header-block">
-                    <h2 className="section-title-main">Explore Diverse Investment Options</h2>
-                    <p className="section-subtitle-muted">
-                        We bring you a seamless, easy-to-navigate platform to manage your investments,
+            {/* 2. Options Section */}
+            <section className="light-section">
+                <div className="container-fixed">
+                    <h2 className="section-headline">Explore Diverse Investment Options</h2>
+                    <p className="section-subtext">
+                        We bring you a seamless, easy-to-navigate platform to manage your investments across various asset classes.
                     </p>
-                </div>
 
-                <div className="marquee-strip-outer">
-                    <div className="marquee-strip-inner">
-                        {[...Array(2)].map((_, i) => (
-                            <React.Fragment key={i}>
-                                <div className="invest-card">
-                                    <img src={stocksIcon} alt="Stocks" className="card-symbol" />
-                                    <h3 className="card-headline">Stocks</h3>
-                                    <p className="card-para">Invest or trade in stocks and build your portfolio.</p>
-                                    <button className="card-action-link">Know more</button>
-                                </div>
-                                <div className="invest-card">
-                                    <img src={fnoIcon} alt="F&O" className="card-symbol" />
-                                    <h3 className="card-headline">F&O</h3>
-                                    <p className="card-para">Leverage market views using futures and options smartly.</p>
-                                    <button className="card-action-link">Know more</button>
-                                </div>
-                                <div className="invest-card">
-                                    <img src={payLaterIcon} alt="Pay Later" className="card-symbol" />
-                                    <h3 className="card-headline">Pay Later (MTF)</h3>
-                                    <p className="card-para">Get up to 4x leverage to trade in stocks.</p>
-                                    <button className="card-action-link">Know more</button>
-                                </div>
-                                <div className="invest-card">
-                                    <img src={mutualFundsIcon} alt="Mutual Funds" className="card-symbol" />
-                                    <h3 className="card-headline">Mutual Funds</h3>
-                                    <p className="card-para">Diversify your investments with top fund choices.</p>
-                                    <button className="card-action-link">Know more</button>
-                                </div>
-                            </React.Fragment>
-                        ))}
+                    <div className="marquee-container">
+                        <div className="marquee-inner">
+                            {[...Array(2)].map((_, i) => (
+                                <React.Fragment key={i}>
+                                    <div className="invest-card">
+                                        <img src={stocksIcon} alt="Stocks" className="card-icon" />
+                                        <h3 className="card-title">Stocks</h3>
+                                        <p className="card-body">Invest or trade in stocks and build your portfolio effortlessly.</p>
+                                        <button className="btn-card-link">Know more</button>
+                                    </div>
+                                    <div className="invest-card">
+                                        <img src={fnoIcon} alt="F&O" className="card-icon" />
+                                        <h3 className="card-title">F&O</h3>
+                                        <p className="card-body">Leverage market views using futures and options smartly.</p>
+                                        <button className="btn-card-link">Know more</button>
+                                    </div>
+                                    <div className="invest-card">
+                                        <img src={payLaterIcon} alt="Pay Later" className="card-icon" />
+                                        <h3 className="card-title">Pay Later (MTF)</h3>
+                                        <p className="card-body">Get up to 4x leverage to trade in your favorite stocks.</p>
+                                        <button className="btn-card-link">Know more</button>
+                                    </div>
+                                    <div className="invest-card">
+                                        <img src={mutualFundsIcon} alt="Mutual Funds" className="card-icon" />
+                                        <h3 className="card-title">Mutual Funds</h3>
+                                        <p className="card-body">Diversify your investments with our top fund curated choices.</p>
+                                        <button className="btn-card-link">Know more</button>
+                                    </div>
+                                </React.Fragment>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* --- ZERO FEES SECTION --- */}
-            <section className="zero-fees-wrap">
-                <div className="zero-text-area">
-                    <h2 className="zero-headline">Start your journey,<br />absolutely free</h2>
-                    <p className="zero-sub-p">No hidden fees, no upfront costs. Start your investment journey today.</p>
+            {/* 3. Journey (Zero Fees) Section Refined */}
+            <section className="journey-section">
+                <div className="container-fixed">
+                    <div className="journey-grid">
+                        <div className="journey-content">
+                            <h2 className="journey-title">Start your journey,<br />absolutely free</h2>
+                            <p className="section-subtext" style={{ textAlign: 'left', marginLeft: 0, marginBottom: '40px' }}>
+                                No hidden fees, no upfront costs. Start your investment journey today.
+                            </p>
 
-                    <div className="zero-benefit-list">
-                        <div className="benefit-item-row">
-                            <img src={accountOpeningIcon} alt="Account Opening" className="benefit-img" />
-                            <div className="benefit-details">
-                                <h4>No Account Opening Fee</h4>
-                                <p>Begin your investment journey without any initial cost</p>
+                            <div className="benefit-item">
+                                <img src={accountOpeningIcon} alt="Free" className="benefit-icon-img" />
+                                <div className="benefit-info">
+                                    <h4>No Account Opening Fee</h4>
+                                    <p>Begin your investment journey without any initial cost</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="benefit-item-row">
-                            <img src={zeroAmcIcon} alt="Zero AMC" className="benefit-img" />
-                            <div className="benefit-details">
-                                <h4>Zero AMC for Life</h4>
-                                <p>Keep your account for a lifetime without maintenance charges</p>
+
+                            <div className="benefit-item">
+                                <img src={zeroAmcIcon} alt="AMC" className="benefit-icon-img" />
+                                <div className="benefit-info">
+                                    <h4>Zero AMC for Life</h4>
+                                    <p>Keep your account for a lifetime without maintenance charges</p>
+                                </div>
                             </div>
+
+                            <div className="benefit-item">
+                                <div className="benefit-price">₹0</div>
+                                <div className="benefit-info">
+                                    <h4>Zero Brokerage for 1 Month</h4>
+                                    <p>Trade without fees for your first month.</p>
+                                </div>
+                            </div>
+
+                            <button className="btn-dark-cta" onClick={() => navigate('/register')}>
+                                Get Started
+                            </button>
                         </div>
-                        <div className="benefit-item-row">
-                            <div className="big-zero-icon">₹0</div>
-                            <div className="benefit-details">
-                                <h4>Zero Brokerage for 1 Month</h4>
-                                <p>Trade without fees for your first month.</p>
+
+                        <div className="journey-visual">
+                            {/* CSS-Built Replica of user's screenshot */}
+                            <div className="journey-visual-card">
+                                <div className="floating-pill pill-account">Account opening</div>
+                                <div className="floating-pill pill-brokerage">Brokerage*</div>
+                                <div className="floating-pill pill-amc">AMC</div>
+
+                                <div className="zero-main-display">
+                                    <span className="zero-symbol">₹</span>
+                                    <span className="zero-number">0</span>
+                                </div>
+
+                                {/* Decorative Elements */}
+                                <div className="deco-dots">
+                                    <div className="dot-circle"></div>
+                                </div>
+                                <div className="deco-waves">
+                                    <div className="wave-line"></div>
+                                    <div className="wave-line"></div>
+                                    <div className="wave-line"></div>
+                                </div>
+                                <div className="deco-lines">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" opacity="0.3">
+                                        <path d="M10 10L50 50M10 50L50 10" stroke="#fff" strokeWidth="2" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <button className="btn-get-started-dark" onClick={() => navigate('/register')}>
-                        Get Started
-                    </button>
-                </div>
-
-                <div className="zero-image-area">
-                    <img src={accountOpenImg} alt="Zero Fees Visual" className="zero-main-img" />
                 </div>
             </section>
 
-            {/* --- FLOATING QR BUTTON --- */}
-            <div className="fixed-qr-trigger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
+            {/* Floating QR Refined */}
+            <div className="floating-qr-code">
+                <div className="qr-grid-icon">
+                    <div className="qr-dot"></div>
+                    <div className="qr-dot"></div>
+                    <div className="qr-dot"></div>
+                    <div className="qr-dot"></div>
+                </div>
             </div>
         </div>
     );

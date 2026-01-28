@@ -1,214 +1,180 @@
-/* About Page Styles */
+/* --- PIXEL-PERFECT ABOUT PAGE (PAYTM MONEY STYLE) --- */
+
 .about-page {
-    background-color: #f8fafc;
-    /* Light background */
+    background-color: #ffffff;
+    /* White bg like Paytm about */
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    color: #0f172a;
+    color: #111;
     padding-bottom: 5rem;
 }
 
+/* Breadcrumb area with gradient */
 .about-header-bg {
     background: radial-gradient(circle at 50% 120%, #4a8fbf 0%, #0a1e3b 40%, #000c24 100%);
-    padding-top: 100px;
-    /* Space for Navbar */
-    padding-bottom: 60px;
-    margin-bottom: 3rem;
+    padding: 24px 0;
 }
 
 .breadcrumb {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
-/* Hero Section */
+/* About Hero */
 .about-hero {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
+    padding: 80px 0;
     text-align: center;
 }
 
 .about-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #002970;
-    /* Deep Blue*/
-    line-height: 1.2;
-    margin-bottom: 2rem;
+    font-size: 56px;
+    /* High density heading */
+    font-weight: 700;
+    color: #012a72;
+    /* Paytm navy */
+    line-height: 1.1;
+    margin-bottom: 32px;
+    letter-spacing: -1.5px;
 }
 
 .about-title span {
+    color: #00baf2;
     display: block;
 }
 
 .about-description {
-    font-size: 1.1rem;
-    color: #64748b;
+    font-size: 1.15rem;
+    color: #4b5563;
     line-height: 1.8;
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.quote-author {
-    font-weight: 700;
-    color: #002970;
-    font-size: 1.1rem;
-}
-
-.quote-role {
-    color: #64748b;
-    font-size: 0.9rem;
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
 
 /* Values Section */
 .values-section {
-    text-align: center;
-    padding: 4rem 1.5rem;
-    background: #f0f9ff;
-    /* Very light blue tint */
+    padding: 80px 0;
+    background-color: #f8fafc;
 }
 
 .section-headline {
-    font-size: 2.5rem;
+    font-size: 36px;
     font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #111;
 }
 
 .values-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
 }
 
 .value-card {
     background: white;
-    padding: 2.5rem 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    flex: 1 1 250px;
-    max-width: 280px;
+    padding: 40px 32px;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.2s;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .value-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    display: inline-block;
+    font-size: 48px;
+    margin-bottom: 24px;
 }
 
 .value-title {
-    font-weight: 700;
     font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 .value-desc {
     color: #64748b;
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* Story Section */
+/* Our Story */
 .story-section {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    display: flex;
-    gap: 4rem;
+    padding: 100px 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: center;
 }
 
-.story-content {
-    flex: 1;
-}
-
 .story-content h2 {
-    font-size: 2.5rem;
+    font-size: 36px;
     font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .story-subtitle {
     font-weight: 600;
-    color: #334155;
-    margin-bottom: 2rem;
+    color: #94a3b8;
+    margin-bottom: 32px;
     display: block;
+    font-size: 1.1rem;
 }
 
 .story-text {
-    color: #475569;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
     font-size: 1rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .story-image-wrapper {
-    flex: 1;
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
 }
 
 .story-image {
     width: 100%;
-    height: auto;
     display: block;
 }
 
-/* Career / Revolution Section */
+/* Call to Action */
 .revolution-section {
+    background-color: #012a72;
+    color: white;
+    padding: 80px 0;
     text-align: center;
-    padding: 5rem 1.5rem;
-    background: #dbeafe;
-    /* More visible light blue */
+}
+
+.revolution-section .about-description {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .btn-join-team {
-    background-color: #002970;
+    background-color: #00c376;
     color: white;
-    padding: 0.8rem 2.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-top: 2rem;
-    border: none;
-    transition: background-color 0.2s;
+    padding: 18px 48px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
-.btn-join-team:hover {
-    background-color: #001a4d;
-}
-
-/* Community Section */
+/* Community */
 .community-section {
+    padding: 100px 0;
     text-align: center;
-    padding: 4rem 1.5rem;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
-    .story-section {
-        flex-direction: column;
+    .story-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .about-title {
-        font-size: 2rem;
+        font-size: 36px;
     }
 }

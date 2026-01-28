@@ -1,0 +1,241 @@
+/* Send Money Premium Styles */
+
+.send-money-content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.send-money-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.form-panel,
+.quick-panel {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 32px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-header {
+    margin-bottom: 2rem;
+}
+
+.panel-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.panel-subtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.premium-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon .icon {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.25rem;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border-radius: 16px;
+    border: 2px solid #F1F5F9;
+    background: #F8FAFC;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-with-icon.amount input {
+    font-size: 1.5rem;
+    padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+}
+
+.input-with-icon.amount .icon {
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.input-with-icon input:focus {
+    border-color: #4F46E5;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.send-btn {
+    margin-top: 1rem;
+    background: #111827;
+    color: white;
+    padding: 1.25rem;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.send-btn:hover:not(:disabled) {
+    background: #4F46E5;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+.send-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.status-message {
+    padding: 1.25rem;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.status-message.success {
+    background: #DEF7EC;
+    color: #03543F;
+    border: 1px solid #84E1BC;
+}
+
+.status-message.error {
+    background: #FDE8E8;
+    color: #9B1C1C;
+    border: 1px solid #F8B4B4;
+}
+
+/* Quick Panel Styles */
+.quick-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.quick-desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.recipients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.recipient-pill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #F8FAFC;
+    border: 1px solid #F1F5F9;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.recipient-pill:hover {
+    border-color: #4F46E5;
+    background: #EFF6FF;
+}
+
+.recipient-pill.active {
+    background: #EFF6FF;
+    border-color: #4F46E5;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+}
+
+.pill-avatar {
+    width: 44px;
+    height: 44px;
+    background: #4F46E5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.pill-info {
+    flex: 1;
+}
+
+.pill-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.pill-email {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.check-mark {
+    color: #4F46E5;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.security-note {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    background: #F1F5F9;
+    border-radius: 16px;
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.security-icon {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .send-money-grid {
+        grid-template-columns: 1fr;
+    }
+}

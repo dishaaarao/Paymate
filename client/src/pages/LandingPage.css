@@ -1,0 +1,488 @@
+/* --- PIXEL-PERFECT FINAL ADJUSTMENTS (PAYTM MONEY STYLE) --- */
+
+:root {
+    --bg-dark: #0f1118;
+    --neon-green: #00d09c;
+    --sky-blue: #00baf2;
+    --txt-white: #ffffff;
+    --txt-muted: #9ca3af;
+    --nav-grey: #d1d5db;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+}
+
+.landing-page-root {
+    width: 100%;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--txt-white);
+}
+
+/* --- HERO SECTION --- */
+.hero-landing {
+    background-color: var(--bg-dark);
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-glow-main {
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0, 186, 242, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Navigation Bar */
+.main-navbar {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo-triangle {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--sky-blue) 0%, var(--neon-green) 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-triangle span {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #fff;
+    margin-top: 3px;
+}
+
+.logo-text-group .logo-main {
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    display: block;
+}
+
+.logo-text-group .logo-sub {
+    font-size: 0.85rem;
+    color: var(--sky-blue);
+    font-weight: 600;
+    margin-top: -2px;
+    display: block;
+}
+
+.search-bar-wrap {
+    position: relative;
+    width: 320px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+.search-bar-wrap input {
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.65rem 1rem 0.65rem 2.5rem;
+    font-size: 1rem;
+    color: #111;
+    outline: none;
+}
+
+.nav-middle {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.nav-item {
+    color: var(--nav-grey);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-item:hover {
+    color: white;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.btn-login-outline {
+    background: transparent;
+    color: white;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    padding: 0.65rem 2.25rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-login-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-signup-solid {
+    background: white;
+    color: var(--bg-dark);
+    border: none;
+    padding: 0.65rem 2.25rem;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Hero Main Content */
+.hero-main-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 6rem auto 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text-content {
+    flex: 1.2;
+    z-index: 10;
+}
+
+.hero-pill-small {
+    font-size: 1.5rem;
+    color: var(--txt-muted);
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+}
+
+.hero-title-giant {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -3.5px;
+    margin-bottom: 2.5rem;
+    color: var(--txt-white);
+}
+
+.hero-subtitle-muted {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--txt-muted);
+    margin-bottom: 4.5rem;
+}
+
+.btn-neon-large {
+    background: var(--neon-green);
+    color: var(--bg-dark);
+    padding: 1.35rem 3.5rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-neon-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0, 208, 156, 0.3);
+}
+
+.hero-stats-line {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.stat-text {
+    font-size: 1rem;
+    color: var(--txt-muted);
+    font-weight: 700;
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.star-gold {
+    color: #fbbf24;
+}
+
+.hero-mockup-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mockup-img-main {
+    width: 110%;
+    max-width: 800px;
+    height: auto;
+    filter: drop-shadow(0 50px 100px rgba(0, 0, 0, 0.6));
+    margin-right: -10rem;
+}
+
+/* Investment Options */
+.investment-section {
+    background-color: white;
+    color: #111;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.section-title-main {
+    font-size: 4.5rem;
+    font-weight: 850;
+    letter-spacing: -2.5px;
+    margin-bottom: 1.5rem;
+}
+
+.section-subtitle-muted {
+    font-size: 1.25rem;
+    color: #6b7280;
+    max-width: 800px;
+    margin: 0 auto 6rem;
+}
+
+.marquee-strip-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-strip-inner {
+    display: flex;
+    gap: 3rem;
+    animation: scrollAnimation 40s linear infinite;
+    width: max-content;
+    padding: 2rem;
+}
+
+@keyframes scrollAnimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.invest-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 3.5rem 2.5rem;
+    border-radius: 40px;
+    width: 360px;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.invest-card:hover {
+    transform: translateY(-10px);
+    background: white;
+    border-color: var(--sky-blue);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.card-symbol {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 3rem;
+}
+
+.card-headline {
+    font-size: 1.6rem;
+    font-weight: 850;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.card-para {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.card-action-link {
+    background: transparent;
+    border: none;
+    color: var(--sky-blue);
+    font-weight: 850;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Zero Fees Section */
+.zero-fees-wrap {
+    background-color: #fafafa;
+    color: #111;
+    padding: 10rem 7%;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.zero-headline {
+    font-size: 4.5rem;
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 2.5rem;
+}
+
+.zero-sub-p {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin-bottom: 5rem;
+}
+
+.benefit-item-row {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.benefit-img {
+    width: 65px;
+}
+
+.big-zero-icon {
+    font-size: 4rem;
+    font-weight: 950;
+    color: var(--sky-blue);
+    min-width: 80px;
+}
+
+.benefit-details h4 {
+    font-size: 1.4rem;
+    font-weight: 850;
+    margin-bottom: 0.5rem;
+}
+
+.btn-get-started-dark {
+    background: #111;
+    color: white;
+    padding: 1.5rem 4rem;
+    border-radius: 12px;
+    font-weight: 850;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.zero-main-img {
+    width: 110%;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+/* Fixed Elements */
+.fixed-qr-trigger {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 72px;
+    height: 72px;
+    background-color: white;
+    border-radius: 50%;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .nav-middle {
+        display: none;
+    }
+
+    .hero-title-giant {
+        font-size: 4.5rem;
+    }
+
+    .mockup-img-main {
+        display: none;
+    }
+
+    .hero-text-content {
+        text-align: center;
+    }
+
+    .hero-stats-line {
+        justify-content: center;
+    }
+
+    .btn-neon-large {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .zero-fees-wrap {
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+    }
+
+    .benefit-item-row {
+        justify-content: center;
+        text-align: left;
+    }
+}

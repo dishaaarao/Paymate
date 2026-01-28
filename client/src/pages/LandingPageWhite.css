@@ -1,0 +1,239 @@
+/* ... Existing dark theme styles ... */
+
+/* Sections Wrapper */
+.sections-wrapper {
+    background-color: #f5f7fa;
+    /* Light background for scrolling sections */
+    width: 100%;
+}
+
+/* Common Section Styles */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+/* ... existing code ... */
+
+/* Floating QR Button */
+.floating-qr {
+    position: absolute;
+    top: 5rem;
+    /* Reverting to match 5rem padding */
+    right: 2rem;
+    background: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 10;
+}
+
+.floating-qr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Explore Options Cards */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.option-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #e2e8f0;
+}
+
+.option-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.option-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.option-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.btn-know-more {
+    background-color: #002970;
+    /* Deep Blue matched from reference */
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: auto;
+    transition: background 0.2s;
+}
+
+.btn-know-more:hover {
+    background-color: #001f5c;
+}
+
+/* Start Journey Section */
+.journey-section {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 6rem 2rem;
+}
+
+.journey-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 500px;
+    text-align: left;
+}
+
+.journey-headline {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.benefit-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.benefit-text h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.benefit-text p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.journey-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Responsive for Journey Section */
+@media (min-width: 1024px) {
+    .journey-section {
+        flex-direction: row;
+        justify-content: center;
+        gap: 8rem;
+    }
+}
+
+/* =========================================
+   Scrolling Marquee Styles
+   ========================================= */
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+    /* Optional: Fade effect on edges */
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-content {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    /* 
+       Total width of one set = 4 cards + 4 gaps (3 internal + 1 padding-right).
+       We animate to -50% which corresponds exactly to one full set width.
+    */
+    padding-right: 2rem;
+    animation: scroll-left 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.marquee-content .option-card {
+    flex: 0 0 300px;
+    /* Fixed width to ensure consistency */
+    width: 300px;
+    margin: 0;
+    /* Override any potential margins */
+    /* Ensure card looks good */
+    height: auto;
+    align-self: stretch;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

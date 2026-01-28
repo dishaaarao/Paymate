@@ -1,0 +1,214 @@
+/* About Page Styles */
+.about-page {
+    background-color: #f8fafc;
+    /* Light background */
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #0f172a;
+    padding-bottom: 5rem;
+}
+
+.about-header-bg {
+    background: radial-gradient(circle at 50% 120%, #4a8fbf 0%, #0a1e3b 40%, #000c24 100%);
+    padding-top: 100px;
+    /* Space for Navbar */
+    padding-bottom: 60px;
+    margin-bottom: 3rem;
+}
+
+.breadcrumb {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.about-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #002970;
+    /* Deep Blue*/
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.about-title span {
+    display: block;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-author {
+    font-weight: 700;
+    color: #002970;
+    font-size: 1.1rem;
+}
+
+.quote-role {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Values Section */
+.values-section {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: #f0f9ff;
+    /* Very light blue tint */
+}
+
+.section-headline {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 3rem;
+}
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    flex: 1 1 250px;
+    max-width: 280px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.value-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.value-desc {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Story Section */
+.story-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.story-subtitle {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.story-text {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.story-image-wrapper {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.story-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Career / Revolution Section */
+.revolution-section {
+    text-align: center;
+    padding: 5rem 1.5rem;
+    background: #dbeafe;
+    /* More visible light blue */
+}
+
+.btn-join-team {
+    background-color: #002970;
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-join-team:hover {
+    background-color: #001a4d;
+}
+
+/* Community Section */
+.community-section {
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .story-section {
+        flex-direction: column;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+}

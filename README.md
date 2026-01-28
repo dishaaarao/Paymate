@@ -88,3 +88,21 @@ ExpressAPI --> WalletService
 ExpressAPI --> TransactionService
 WalletService --> MongoDB
 TransactionService --> MongoDB
+
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>
+🛠️ Tech Stack
+🎨 Frontend
+React.js (Vite)
+React Router DOM
+Axios
+Modern ES6+
+
+⚙️ Backend
+Node.js
+Express.js
+MongoDB
+Mongoose
+JWT
+bcryptjs
+dotenv

@@ -44,6 +44,81 @@ The project demonstrates **secure authentication**, **wallet management**, and *
 <p align="center">
   <img src="assets/paymate-flow.gif" width="520"/>
 </p>
+🌀 PayMate – Animated User Flow
+─────────────────────────────
+
+[ User Entry ]
+      │
+      ▼
+┌───────────────────────┐
+│   🏠 Landing Page     │
+│  “Fast • Secure • Easy│
+│     Money Transfer”   │
+└─────────┬─────────────┘
+          │  (CTA Click ✨)
+          ▼
+┌───────────────────────┐
+│ 🔐 Authentication     │
+│  ├─ Signup (New User) │
+│  └─ Login (Existing)  │
+└─────────┬─────────────┘
+          │  (Verified ✅)
+          ▼
+┌───────────────────────┐
+│ 📊 User Dashboard     │
+│  ├─ Balance Overview  │
+│  ├─ Recent Activity   │
+│  └─ Quick Actions     │
+└─────────┬─────────────┘
+          │
+          ▼
+┌───────────────────────┐
+│ 💸 Money Transfer     │
+│  ├─ Send Money        │
+│  ├─ Request Money    │
+│  └─ Add Beneficiary  │
+└─────────┬─────────────┘
+          │
+          ▼
+┌───────────────────────┐
+│ 🧾 Payment Details    │
+│  ├─ Enter Amount     │
+│  ├─ Choose Method    │
+│     ├─ Wallet        │
+│     ├─ UPI           │
+│     └─ Bank Transfer │
+└─────────┬─────────────┘
+          │  (Processing ⏳)
+          ▼
+┌───────────────────────┐
+│ 🔒 Secure Transaction │
+│  ├─ Validation        │
+│  ├─ Encryption        │
+│  └─ Status Response   │
+└─────────┬─────────────┘
+          │
+          ▼
+┌───────────────────────┐
+│ 📜 Transaction Log    │
+│  ├─ Success / Failed │
+│  ├─ History View     │
+│  └─ Filters & Search │
+└─────────┬─────────────┘
+          │
+          ▼
+┌───────────────────────┐
+│ 🚪 Logout / Exit      │
+│  Session End Securely │
+└───────────────────────┘
+
+
+🎞️ Flow Animation Reference
+──────────────────────────
+GIF File:
+assets/paymate-flow.gif
+
+Usage (README):
+"Visual walkthrough of PayMate user journey from login to transaction completion."
 
 ---
 
@@ -96,25 +171,43 @@ The project demonstrates **secure authentication**, **wallet management**, and *
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>
 ## 📂 Project Structure
 
+📂 PayMate – Project Structure
+────────────────────────────
+
 PayMate/
-├─ client/
-│  ├─ src/
-│  └─ public/
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── styles/
+│   │   └── App.jsx
+│   └── public/
+│       └── index.html
 │
-├─ server/
-│  ├─ routes/
-│  ├─ models/
-│  ├─ middleware/
-│  └─ server.js
+├── server/
+│   ├── routes/
+│   │   ├── auth.routes.js
+│   │   ├── payment.routes.js
+│   │   └── user.routes.js
+│   ├── models/
+│   │   ├── User.model.js
+│   │   └── Transaction.model.js
+│   ├── middleware/
+│   │   └── auth.middleware.js
+│   └── server.js
 │
-├─ assets/
-│  ├─ logo.png
-│  ├─ login.png
-│  ├─ dashboard.png
-│  ├─ transactions.png
-│  └─ paymate-flow.gif
+├── assets/
+│   ├── logo.png
+│   ├── login.png
+│   ├── dashboard.png
+│   ├── transactions.png
+│   └── paymate-flow.gif
 │
-└─ README.md
+├── .env
+├── package.json
+└── README.md
+
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>
 ⚙️ Environment Variables

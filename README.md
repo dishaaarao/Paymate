@@ -44,83 +44,76 @@ The project demonstrates **secure authentication**, **wallet management**, and *
 <p align="center">
   <img src="assets/paymate-flow.gif" width="520"/>
 </p>
-🌀 PayMate – Animated User Flow
-─────────────────────────────
+<!-- ===================== USER FLOW SECTION ===================== -->
 
-[ User Entry ]
-      │
-      ▼
-┌───────────────────────┐
-│   🏠 Landing Page     │
-│  “Fast • Secure • Easy│
-│     Money Transfer”   │
-└─────────┬─────────────┘
-          │  (CTA Click ✨)
-          ▼
-┌───────────────────────┐
-│ 🔐 Authentication     │
-│  ├─ Signup (New User) │
-│  └─ Login (Existing)  │
-└─────────┬─────────────┘
-          │  (Verified ✅)
-          ▼
-┌───────────────────────┐
-│ 📊 User Dashboard     │
-│  ├─ Balance Overview  │
-│  ├─ Recent Activity   │
-│  └─ Quick Actions     │
-└─────────┬─────────────┘
-          │
-          ▼
-┌───────────────────────┐
-│ 💸 Money Transfer     │
-│  ├─ Send Money        │
-│  ├─ Request Money    │
-│  └─ Add Beneficiary  │
-└─────────┬─────────────┘
-          │
-          ▼
-┌───────────────────────┐
-│ 🧾 Payment Details    │
-│  ├─ Enter Amount     │
-│  ├─ Choose Method    │
-│     ├─ Wallet        │
-│     ├─ UPI           │
-│     └─ Bank Transfer │
-└─────────┬─────────────┘
-          │  (Processing ⏳)
-          ▼
-┌───────────────────────┐
-│ 🔒 Secure Transaction │
-│  ├─ Validation        │
-│  ├─ Encryption        │
-│  └─ Status Response   │
-└─────────┬─────────────┘
-          │
-          ▼
-┌───────────────────────┐
-│ 📜 Transaction Log    │
-│  ├─ Success / Failed │
-│  ├─ History View     │
-│  └─ Filters & Search │
-└─────────┬─────────────┘
-          │
-          ▼
-┌───────────────────────┐
-│ 🚪 Logout / Exit      │
-│  Session End Securely │
-└───────────────────────┘
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=3"/>
 
+<h2 align="center">🌀 PayMate – User Flow</h2>
 
-🎞️ Flow Animation Reference
-──────────────────────────
-GIF File:
-assets/paymate-flow.gif
-
-Usage (README):
-"Visual walkthrough of PayMate user journey from login to transaction completion."
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&size=18&duration=3000&pause=800&color=3B82F6&center=true&vCenter=true&width=700&lines=Fast+•+Secure+•+Seamless+Money+Transfer;End-to-End+User+Journey+of+PayMate;From+Login+to+Successful+Transaction" />
+</p>
 
 ---
+
+### 🚀 Step-by-Step User Journey
+
+#### 1️⃣ Entry Point
+- User lands on **PayMate Landing Page**
+- Clear CTA: **Fast • Secure • Easy Money Transfer**
+
+#### 2️⃣ Authentication
+- New User → **Sign Up**
+- Existing User → **Login**
+- Secure verification & session creation
+
+#### 3️⃣ Dashboard
+- Balance overview
+- Recent transactions
+- Quick actions (Send / Request Money)
+
+#### 4️⃣ Transaction Flow
+- Choose action:
+  - Send Money
+  - Request Money
+  - Add Beneficiary
+- Enter amount
+- Select payment method:
+  - Wallet
+  - UPI
+  - Bank Transfer
+
+#### 5️⃣ Secure Processing
+- Validation
+- Encryption
+- Transaction execution
+- Status response (Success / Failed)
+
+#### 6️⃣ Post-Transaction
+- Transaction history
+- Filters & search
+- Transaction logs & receipts
+
+#### 7️⃣ Exit
+- Secure logout
+- Session termination
+
+---
+
+### 🎞️ Animated Flow Preview
+
+<p align="center">
+  <img src="assets/paymate-flow.gif" alt="PayMate User Flow Animation" width="85%" />
+</p>
+
+<p align="center">
+  <em>Visual walkthrough of the complete PayMate user journey</em>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=3"/>
+
+<!-- =================== END USER FLOW SECTION =================== -->
+
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>
 

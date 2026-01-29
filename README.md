@@ -171,19 +171,19 @@ Usage (README):
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>
 ## 📂 Project Structure
 
-📂 PayMate – Project Structure
-────────────────────────────
+## 📂 Project Structure
 
+```bash
 PayMate/
 ├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── styles/
-│   │   └── App.jsx
-│   └── public/
-│       └── index.html
+│   ├── public/
+│   │   └── index.html
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── services/
+│       ├── styles/
+│       └── App.jsx
 │
 ├── server/
 │   ├── routes/
@@ -207,6 +207,8 @@ PayMate/
 ├── .env
 ├── package.json
 └── README.md
+```
+
 
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>

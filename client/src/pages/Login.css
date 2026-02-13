@@ -1,0 +1,251 @@
+/* Login Page Specific Styles */
+.login-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fa;
+    /* Light grey background */
+    padding: 2rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 750px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+    overflow: hidden;
+    min-height: 450px;
+}
+
+/* Left Side - Form */
+.login-form-section {
+    flex: 1;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #1e293b;
+}
+
+.paymate-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.paymate-logo-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #00baf2 0%, #00d09c 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paymate-logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.auth-error-message {
+    background-color: #fee2e2;
+    color: #ef4444;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #fecaca;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #334155;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #0f172a;
+    transition: border-color 0.2s;
+    background-color: white;
+    /* Ensure white bg */
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #00BAF2;
+}
+
+.btn-proceed {
+    width: 100%;
+    background-color: #00BAF2;
+    /* Cyan */
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-proceed:hover {
+    background-color: #009ecd;
+}
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: #e2e8f0;
+}
+
+.divider-text {
+    padding: 0 1rem;
+}
+
+.qr-login-btn {
+    width: 100%;
+    background: white;
+    border: 1px solid #00BAF2;
+    color: #00BAF2;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.qr-login-btn:hover {
+    background: #f0f9ff;
+}
+
+.login-footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.login-footer a {
+    color: #00BAF2;
+    text-decoration: none;
+}
+
+/* Right Side - Marketing */
+.login-banner-section {
+    flex: 1.2;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content {
+    z-index: 2;
+    max-width: 400px;
+}
+
+.banner-headline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0c4a6e;
+    margin-bottom: 0.5rem;
+}
+
+.banner-subheadline {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #00BAF2;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.banner-highlight-btn {
+    background-color: #0f172a;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    cursor: default;
+}
+
+.banner-image {
+    width: 100%;
+    max-width: 320px;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    border-radius: 20px;
+    background: white;
+    /* Fallback frame */
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .login-banner-section {
+        display: none;
+        /* Hide banner on mobile to match typical flows, or keep it stacked */
+    }
+}

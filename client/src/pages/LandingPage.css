@@ -1,0 +1,265 @@
+.landing-container {
+    min-height: auto;
+    /* Allow height to be determined by content/padding for split view */
+    width: 100%;
+    /* Exact Deep Navy to Light Blue Mist Gradient */
+    background: radial-gradient(circle at 50% 120%, #4a8fbf 0%, #0a1e3b 40%, #000c24 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2rem 8rem 2rem;
+    /* Added extra bottom padding for the fade area */
+    position: relative;
+    overflow: visible;
+    /* Allow hero image to overhang if needed */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* No stars in this specific Paytm Money view, just clean gradients */
+.landing-container::before {
+    display: none;
+}
+
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    /* Align image to bottom like screenshot */
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    /* Larger */
+    margin-right: -50px;
+    /* Slight overlap to right */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    /* No drop shadow in the flat style screenshot, but we can keep subtle */
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    transform: none;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    /* Push up slightly */
+    z-index: 2;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.headline {
+    font-family: inherit;
+    font-size: 4rem;
+    /* Larger */
+    font-weight: 600;
+    /* Semi-bold but not too heavy */
+    line-height: 1.1;
+    color: #ffffff;
+    max-width: 20ch;
+    letter-spacing: -0.5px;
+}
+
+.subheadline {
+    color: #94a3b8;
+    /* Muted grey/blue */
+    font-size: 1.25rem;
+    max-width: 45ch;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    /* More space between button and footer stats */
+    margin-top: 1.5rem;
+}
+
+.btn-get-started {
+    width: auto;
+    padding: 1rem 2.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+    /* Dark text on green button */
+    background: #00D09C;
+    /* Vibrant Mint Green matching screenshot */
+    border: none;
+    border-radius: 8px;
+    /* Slightly rounded, not full pill */
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 208, 156, 0.3);
+    transition: all 0.2s;
+}
+
+.btn-get-started:hover {
+    transform: translateY(-1px);
+    background: #00bf8f;
+    box-shadow: 0 6px 25px rgba(0, 208, 156, 0.4);
+}
+
+/* Stats Footer specific styling */
+.stats-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.stats-divider {
+    height: 20px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.star-icon {
+    color: #fbbf24;
+    /* Amber/Yellow for star */
+}
+
+/* Navigation Header */
+.landing-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* Ensure this is on top of everything */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-link-item {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    opacity: 0.9;
+}
+
+.nav-link-item:hover {
+    opacity: 1;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-login:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-signup {
+    background: white;
+    color: #0a1e3b;
+    padding: 0.5rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-signup:hover {
+    background: #f1f5f9;
+}
+
+
+/* Tablet/Desktop Tweaks */
+@media (min-width: 1024px) {
+    .landing-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 6rem;
+        /* Horizontal padding only */
+        gap: 2rem;
+        /* Rich Dark Navy with subtle bottom glow matching screenshot */
+        background: radial-gradient(80% 80% at 50% 110%, #1e3a8a 0%, #020617 60%);
+        min-height: 85vh;
+        /* Standard height */
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+        /* STRICTLY contain inside blue box - User Request */
+    }
+
+    .content-section {
+        flex: 1;
+        max-width: 600px;
+        order: 1;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hero-section {
+        flex: 1;
+        order: 2;
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: static;
+        height: 100%;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 550px;
+        position: absolute;
+        bottom: -10px;
+        /* Lifted up */
+        right: 100px;
+        z-index: 10;
+    }
+}
